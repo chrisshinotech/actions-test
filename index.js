@@ -8,7 +8,7 @@ try {
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
   const env = process.env
-  console.log(env)
+  core.setOutput("env", env);
 } catch (error) {
   core.setFailed(error.message);
 }
